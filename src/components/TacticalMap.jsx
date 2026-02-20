@@ -113,18 +113,7 @@ export default function TacticalMap({ transfers, onCountrySelect }) {
                 <div className="w-32 h-[1px] bg-border-tactical mt-2" />
             </div>
 
-            <style jsx>{`
-        .w-full { width: 100%; }
-        .h-full { height: 100%; }
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .inset-0 { top: 0; left: 0; right: 0; bottom: 0; }
-        .m-4 { margin: 16px; }
-        .top-8 { top: 32px; }
-        .right-8 { right: 32px; }
-        .opacity-50 { opacity: 0.5; }
-        .text-text-muted { color: var(--text-muted); }
-      `}</style>
+
         </div>
     );
 }

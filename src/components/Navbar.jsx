@@ -37,19 +37,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <style jsx>{`
-        .flex { display: flex; }
-        .items-center { align-items: center; }
-        .gap-2 { gap: 8px; }
-        .gap-3 { gap: 12px; }
-        .gap-4 { gap: 16px; }
-        .gap-6 { gap: 24px; }
-        .h-full { height: 100%; }
-        .px-6 { padding-left: 24px; padding-right: 24px; }
-        .ml-auto { margin-left: auto; }
-        .text-xl { font-size: 1.25rem; }
-        .font-bold { font-weight: 700; }
-      `}</style>
+
         </nav>
     );
 }

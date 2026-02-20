@@ -79,34 +79,7 @@ export default function SidebarLeft() {
 
             </div>
 
-            <style jsx>{`
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .items-center { align-items: center; }
-        .items-start { align-items: flex-start; }
-        .justify-between { justify-content: space-between; }
-        .gap-2 { gap: 8px; }
-        .gap-3 { gap: 12px; }
-        .gap-4 { gap: 16px; }
-        .gap-8 { gap: 32px; }
-        .flex-1 { flex: 1; }
-        .h-full { height: 100%; }
-        .p-3 { padding: 12px; }
-        .p-4 { padding: 16px; }
-        .p-6 { padding: 24px; }
-        .mb-4 { margin-bottom: 16px; }
-        .mt-auto { margin-top: auto; }
-        .mt-0.5 { margin-top: 2px; }
-        .pt-6 { padding-top: 24px; }
-        .text-xs { font-size: 0.75rem; }
-        .text-sm { font-size: 0.875rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-2xl { font-size: 1.5rem; }
-        .font-mono { font-family: ui-monospace, monospace; }
-        .font-semibold { font-weight: 600; }
-        .uppercase { text-transform: uppercase; }
-        .rounded { border-radius: 4px; }
-      `}</style>
+
         </aside>
     );
 }

@@ -82,44 +82,7 @@ export default function SidebarRight({ selectedCountry }) {
                 </section>
             </div>
 
-            <style jsx>{`
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .grid { display: grid; }
-        .grid-cols-1 { grid-template-columns: 1fr; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .gap-1 { gap: 4px; }
-        .gap-2 { gap: 8px; }
-        .gap-3 { gap: 12px; }
-        .gap-4 { gap: 16px; }
-        .gap-6 { gap: 24px; }
-        .flex-1 { flex: 1; }
-        .h-full { height: 100%; }
-        .w-full { width: 100%; }
-        .p-2 { padding: 8px; }
-        .p-4 { padding: 16px; }
-        .p-6 { padding: 24px; }
-        .p-8 { padding: 32px; }
-        .mb-1 { margin-bottom: 4px; }
-        .mb-2 { margin-bottom: 8px; }
-        .mb-4 { margin-bottom: 16px; }
-        .mt-4 { margin-top: 16px; }
-        .mt-auto { margin-top: auto; }
-        .text-xs { font-size: 12px; }
-        .text-sm { font-size: 14px; }
-        .text-lg { font-size: 18px; }
-        .text-xl { font-size: 20px; }
-        .text-2xl { font-size: 24px; }
-        .font-bold { font-weight: 700; }
-        .font-semibold { font-weight: 600; }
-        .font-mono { font-family: monospace; }
-        .uppercase { text-transform: uppercase; }
-        .rounded { border-radius: 4px; }
-        .rounded-full { border-radius: 9999px; }
-        .overflow-y-auto { overflow-y: auto; }
-      `}</style>
+
         </aside>
     );
 }
