@@ -8,9 +8,16 @@ import { useWeaponTransfers } from './hooks/useWeaponTransfers';
 function App() {
   const { data: transfers, loading, error } = useWeaponTransfers();
   const [selectedCountry, setSelectedCountry] = useState(null);
-  const [yearFilter, setYearFilter] = useState(2024);
+  const [yearFilter, setYearFilter] = useState(2025);
 
   const filteredTransfers = transfers.filter(t => t.year <= yearFilter);
+
+  const handleCountrySelect = (properties) => {
+    // MapLibre properties can sometimes be stringified or filtered. 
+    // We find the original rich object from our transfers list.
+    const original = transfers.find(t => t.id === properties.id);
+    setSelectedCountry(original || properties);
+  };
 
   return (
     <div className="app-container">
@@ -42,7 +49,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <TacticalMap transfers={filteredTransfers} onCountrySelect={setSelectedCountry} />
+          <TacticalMap transfers={filteredTransfers} onCountrySelect={handleCountrySelect} />
         )}
       </main>
 

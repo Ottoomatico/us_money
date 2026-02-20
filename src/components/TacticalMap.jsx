@@ -65,16 +65,30 @@ export default function TacticalMap({ transfers, onCountrySelect }) {
                 }
             });
             // Interactivity
-            map.current.on('click', 'transfers-glow', (e) => {
-                const props = e.features[0].properties;
-                onCountrySelect(props);
-            });
+            const handleMapClick = (e) => {
+                if (e.features && e.features.length > 0) {
+                    const props = e.features[0].properties;
+                    // Pass the whole property object or a unique ID
+                    onCountrySelect(props);
+                }
+            };
+
+            map.current.on('click', 'transfers-glow', handleMapClick);
+            map.current.on('click', 'transfers-point', handleMapClick);
 
             map.current.on('mouseenter', 'transfers-glow', () => {
                 map.current.getCanvas().style.cursor = 'pointer';
             });
 
             map.current.on('mouseleave', 'transfers-glow', () => {
+                map.current.getCanvas().style.cursor = '';
+            });
+
+            map.current.on('mouseenter', 'transfers-point', () => {
+                map.current.getCanvas().style.cursor = 'pointer';
+            });
+
+            map.current.on('mouseleave', 'transfers-point', () => {
                 map.current.getCanvas().style.cursor = '';
             });
         });
