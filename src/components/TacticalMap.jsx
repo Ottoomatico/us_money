@@ -84,7 +84,10 @@ export default function TacticalMap({ transfers, onCountrySelect }) {
 
     // Update data if transfers change
     useEffect(() => {
-        if (!map.current || !map.current.getSource('transfers')) return;
+        if (!map.current) return;
+
+        const source = map.current.getSource('transfers');
+        if (!source) return;
 
         const geoJson = {
             type: 'FeatureCollection',
@@ -98,7 +101,7 @@ export default function TacticalMap({ transfers, onCountrySelect }) {
             }))
         };
 
-        map.current.getSource('transfers').setData(geoJson);
+        source.setData(geoJson);
     }, [transfers]);
 
     return (
